@@ -1,0 +1,1 @@
+to install all packages use pip3 install -r requirements.txt
