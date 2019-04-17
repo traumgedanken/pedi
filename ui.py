@@ -10,6 +10,7 @@ from operations import Operations
 from drawer import Drawer
 from image_manipulator import BRIGHTNESS_FACTOR_MIN, BRIGHTNESS_FACTOR_MAX
 from database import DataBase
+from license_state import LicensedState, NotLicensedState
 
 
 # system
@@ -209,9 +210,9 @@ class ModificationTab(QWidget):
         self.unit_label = QLabel("px")
         self.unit_label.setMaximumWidth(50)
 
-        self.apply_btn = QPushButton("Apply")
-        self.apply_btn.setFixedWidth(90)
-        self.apply_btn.clicked.connect(self.on_apply)
+        self.apply_buttton = QPushButton("Apply")
+        self.apply_buttton.setFixedWidth(90)
+        self.apply_buttton.clicked.connect(self.on_apply)
 
         width_layout = QHBoxLayout()
         width_layout.addWidget(self.width_box)
@@ -219,7 +220,7 @@ class ModificationTab(QWidget):
         width_layout.addWidget(self.unit_label)
 
         apply_layout = QHBoxLayout()
-        apply_layout.addWidget(self.apply_btn)
+        apply_layout.addWidget(self.apply_buttton)
         apply_layout.setAlignment(Qt.AlignRight)
 
         label_layout = QHBoxLayout()
@@ -246,27 +247,27 @@ class ModificationTab(QWidget):
 
         try:
             h = int(self.height_box.text())
-            self.apply_btn.setEnabled(True)
+            self.apply_buttton.setEnabled(True)
 
             if(h < 0 or h > 1500):
                 raise Exception()
 
             logging.debug('new height value: %d' % h)
         except:
-            self.apply_btn.setEnabled(False)
+            self.apply_buttton.setEnabled(False)
             logging.debug('invalid height value')
 
     def on_width_change(self):
         try:
             w = int(self.width_box.text())
-            self.apply_btn.setEnabled(True)
+            self.apply_buttton.setEnabled(True)
 
             if(w < 0 or w > 1500):
                 raise Exception()
 
             logging.debug('new width value: %d' % w)
         except:
-            self.apply_btn.setEnabled(False)
+            self.apply_buttton.setEnabled(False)
             logging.debug('invalid width value')
 
     def on_apply(self):
@@ -287,17 +288,17 @@ class RotationTab(QWidget):
         super().__init__()
         self.parent = parent
 
-        rotate_left_btn = QPushButton("↺ 90°")
-        rotate_left_btn.clicked.connect(self.on_rotate_left)
+        rotate_left_buttton = QPushButton("↺ 90°")
+        rotate_left_buttton.clicked.connect(self.on_rotate_left)
 
-        rotate_right_btn = QPushButton("↻ 90°")
-        rotate_right_btn.clicked.connect(self.on_rotate_right)
+        rotate_right_buttton = QPushButton("↻ 90°")
+        rotate_right_buttton.clicked.connect(self.on_rotate_right)
 
-        flip_left_btn = QPushButton("⇆")
-        flip_left_btn.clicked.connect(self.on_flip_left)
+        flip_left_buttton = QPushButton("⇆")
+        flip_left_buttton.clicked.connect(self.on_flip_left)
 
-        flip_top_btn = QPushButton("↑↓")
-        flip_top_btn.clicked.connect(self.on_flip_top)
+        flip_top_buttton = QPushButton("↑↓")
+        flip_top_buttton.clicked.connect(self.on_flip_top)
 
         rotate_label = QLabel("Rotate")
         rotate_label.setAlignment(Qt.AlignCenter)
@@ -312,17 +313,17 @@ class RotationTab(QWidget):
         label_layout.addWidget(rotate_label)
         label_layout.addWidget(flip_label)
 
-        btn_layout = QHBoxLayout()
-        btn_layout.setAlignment(Qt.AlignCenter)
-        btn_layout.addWidget(rotate_left_btn)
-        btn_layout.addWidget(rotate_right_btn)
-        btn_layout.addWidget(flip_left_btn)
-        btn_layout.addWidget(flip_top_btn)
+        buttton_layout = QHBoxLayout()
+        buttton_layout.setAlignment(Qt.AlignCenter)
+        buttton_layout.addWidget(rotate_left_buttton)
+        buttton_layout.addWidget(rotate_right_buttton)
+        buttton_layout.addWidget(flip_left_buttton)
+        buttton_layout.addWidget(flip_top_buttton)
 
         main_layout = QVBoxLayout()
         main_layout.setAlignment(Qt.AlignCenter)
         main_layout.addLayout(label_layout)
-        main_layout.addLayout(btn_layout)
+        main_layout.addLayout(buttton_layout)
 
         self.setLayout(main_layout)
 
@@ -371,23 +372,23 @@ class MainLayout(QVBoxLayout):
         self.file_name = None
         self.__licensed = None
 
-        self.upload_btn = QPushButton("Upload")
-        self.upload_btn.clicked.connect(self.on_upload)
+        self.upload_buttton = QPushButton("Upload")
+        self.upload_buttton.clicked.connect(self.on_upload)
 
-        self.reset_btn = QPushButton("Reset")
-        self.reset_btn.setEnabled(False)
-        self.reset_btn.clicked.connect(self.on_reset)
+        self.reset_buttton = QPushButton("Reset")
+        self.reset_buttton.setEnabled(False)
+        self.reset_buttton.clicked.connect(self.on_reset)
 
-        self.save_btn = QPushButton("Save")
-        self.save_btn.setEnabled(False)
-        self.save_btn.clicked.connect(self.on_save)
+        self.save_buttton = QPushButton("Save")
+        self.save_buttton.setEnabled(False)
+        self.save_buttton.clicked.connect(self.on_save)
 
-        btn_layout = QHBoxLayout()
-        btn_layout.setAlignment(Qt.AlignTop)
-        btn_layout.addWidget(self.upload_btn)
-        btn_layout.addWidget(self.reset_btn)
-        btn_layout.addWidget(self.save_btn)
-        self.addLayout(btn_layout)
+        buttton_layout = QHBoxLayout()
+        buttton_layout.setAlignment(Qt.AlignTop)
+        buttton_layout.addWidget(self.upload_buttton)
+        buttton_layout.addWidget(self.reset_buttton)
+        buttton_layout.addWidget(self.save_buttton)
+        self.addLayout(buttton_layout)
 
         self.image_label = QLabel()
         self.image_label.setAlignment(Qt.AlignCenter)
@@ -400,10 +401,11 @@ class MainLayout(QVBoxLayout):
         self.addWidget(self.action_tabs)
         self.action_tabs.setVisible(False)
 
-        self.user_label = QLabel()
-        self.user_label.setAlignment(Qt.AlignBottom)
+        self.user_label = QPushButton()
         self.user_label.setStyleSheet(
-            "QLabel { color: grey; font-size: 10px; }")
+            "QPushButton{font-size: 10px; color: grey;}")
+        self.user_label.setFlat(True)
+        self.user_label.clicked.connect(self.parent.user_authorize)
         self.addWidget(self.user_label)
 
     def set_license(self, merchant, state):
@@ -414,7 +416,7 @@ class MainLayout(QVBoxLayout):
         logging.debug('license set to %s', self.__licensed)
 
     def on_upload(self):
-        logging.debug('on upload btn clicked')
+        logging.debug('on upload buttton clicked')
 
         img_path, _ = QFileDialog.getOpenFileName(self.parent, "Open image",
                                                   "/home/traumgedanken/Pictures",
@@ -426,27 +428,26 @@ class MainLayout(QVBoxLayout):
         image_preview = image_original.clone()
         self.refresh_image()
 
-        self.reset_btn.setEnabled(True)
-        self.save_btn.setEnabled(self.__licensed)
+        self.reset_buttton.setEnabled(True)
+        self.save_buttton.setEnabled(True)
         if (not self.__licensed):
-            self.save_btn.setToolTip('Sign in to unlock this')
+            self.save_buttton.setToolTip('Sign in to unlock this')
         self.action_tabs.setVisible(True)
         self.action_tabs.adjustment_tab.reset_sliders()
         self.action_tabs.modification_tab.set_boxes()
 
     def on_reset(self):
-        logging.debug('on reset btn clicked')
+        logging.debug('on reset buttton clicked')
 
         global image_original, image_preview
         image_preview = image_original.clone()
         self.refresh_image()
 
     def on_save(self):
-        logging.debug('on save btn clicked')
+        logging.debug('on save buttton clicked')
 
-        new_img_path, _ = QFileDialog.getSaveFileName(self.parent, "QFileDialog.getSaveFileName()",
-                                                      f"pedi_{self.file_name}",
-                                                      "Images (*.png *.jpg)")
+        new_img_path = LicensedState.run(
+            self) if self.__licensed else NotLicensedState.run(self)
 
         if new_img_path:
             logging.debug("save output image to %s" % new_img_path)
@@ -475,8 +476,7 @@ class PediUI(QWidget):
         self.center()
         self.show()
 
-        authorized = self.user_authorize()
-        self.main_layout.set_license(self, authorized)
+        self.user_authorize()
 
     def user_authorize(self):
         user = None
@@ -487,11 +487,10 @@ class PediUI(QWidget):
             if (ok_pressed):
                 user = DataBase.get_user(login)
             else:
-                self.main_layout.user_label.setText('not licencsed')
-                return False
+                break
 
-        self.main_layout.user_label.setText('licenced to %s' % user.login)
-        return True
+        self.main_layout.user_label.setText(f'licenced to: {user.login}' if user else 'not licensed')
+        self.main_layout.set_license(self, bool(user))
 
     def center(self):
         qr = self.frameGeometry()
