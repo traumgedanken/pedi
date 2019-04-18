@@ -2,7 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c777d9a8-9f1c-4f0a-8d80-5cf9a2664ad1" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/ui.py" beforeDir="false" afterPath="$PROJECT_DIR$/ui.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/color_filter.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/database.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/drawer.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_manipulator.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/license_state.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/operations.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pedi.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pedi_image.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ui.py" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -11,166 +21,99 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/database.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="270">
+              <caret line="18" column="17" selection-start-line="18" selection-start-column="17" selection-end-line="18" selection-end-column="17" />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="uml://Python/#/home/traumgedanken/Documents/projects/pedi/image_manipulator.py">
+        <entry file="uml://Python/#/home/traumgedanken/Documents/projects/pedi/src/image_manipulator.py">
           <provider selected="true" editor-type-id="UmlEditorProvider">
             <state>
               <ID>Python</ID>
-              <OriginalElement>#/home/traumgedanken/Documents/projects/pedi/image_manipulator.py</OriginalElement>
+              <OriginalElement>#/home/traumgedanken/Documents/projects/pedi/src/image_manipulator.py</OriginalElement>
               <nodes>
-                <node x="1256.0" y="703.5">license_state.LicensedState</node>
-                <node x="304.0" y="100.0">pedi_image.PediImage</node>
-                <node x="1392.549812030075" y="532.5">license_state.State</node>
-                <node x="619.0" y="835.0">operations.Operations</node>
-                <node x="2598.0" y="532.5">image_manipulator.ImageManipulator</node>
-                <node x="1969.0" y="835.0">drawer.Drawer</node>
-                <node x="0.0" y="835.0">ui.AdjustingTab</node>
-                <node x="0.0" y="667.0">pedi_image.ThumbStrategy</node>
-                <node x="546.0" y="703.5">color_filter.BlackWhiteFilter</node>
-                <node x="792.2293233082706" y="532.5">color_filter.ColorFilter</node>
-                <node x="1495.0" y="703.5">license_state.NotLicensedState</node>
-                <node x="3165.0" y="691.0">image_manipulator.ImageFilterer</node>
-                <node x="1038.0" y="703.5">color_filter.SepiaFilter</node>
-                <node x="1775.0" y="835.0">database.DataBase</node>
-                <node x="1201.875" y="432.0">abc.ABC</node>
-                <node x="2883.0" y="703.5">image_manipulator.ImageFliper</node>
-                <node x="0.0" y="0.0">ui.MainLayout</node>
-                <node x="2601.0" y="703.5">image_manipulator.ImageRotator</node>
-                <node x="166.29981203007515" y="508.0">pedi_image.DisplayStrategy</node>
-                <node x="1133.0" y="835.0">ui.ActionTabs</node>
-                <node x="323.0" y="703.5">pedi_image.LabelStrategy</node>
-                <node x="352.0" y="0.0">pedi_image.ICloneable</node>
-                <node x="1351.0" y="835.0">ui.PediUI</node>
-                <node x="2319.0" y="703.5">image_manipulator.ImageBrightener</node>
-                <node x="3447.0" y="703.5">image_manipulator.ImageSharpner</node>
-                <node x="2037.0" y="703.5">image_manipulator.ImageContraster</node>
-                <node x="323.0" y="835.0">ui.FiltersTab</node>
-                <node x="1755.0" y="703.5">image_manipulator.ImageResizer</node>
-                <node x="910.0" y="835.0">ui.RotationTab</node>
-                <node x="799.0" y="703.5">color_filter.NegativeFilter</node>
-                <node x="1568.0" y="835.0">database.User</node>
+                <node x="993.5" y="76.0">abc.ABC</node>
+                <node x="590.0" y="238.0">src.image_manipulator.ImageContraster</node>
+                <node x="1482.0" y="238.0">src.image_manipulator.ImageFilterer</node>
+                <node x="924.75" y="0.0">abc.ABCMeta</node>
+                <node x="1187.0" y="238.0">src.image_manipulator.ImageSharpner</node>
+                <node x="885.0" y="152.0">src.image_manipulator.ImageManipulator</node>
+                <node x="1777.0" y="238.0">src.image_manipulator.ImageResizer</node>
+                <node x="1051.75" y="0.0">object</node>
+                <node x="281.0" y="238.0">src.image_manipulator.ImageBrightener</node>
+                <node x="899.0" y="238.0">src.image_manipulator.ImageRotator</node>
+                <node x="0.0" y="238.0">src.image_manipulator.ImageFliper</node>
               </nodes>
               <notes />
               <edges>
-                <edge source="license_state.State" target="abc.ABC">
-                  <point x="0.0" y="-25.0" />
-                  <point x="1474.049812030075" y="488.0" />
-                  <point x="1251.25" y="488.0" />
-                  <point x="9.875" y="13.0" />
+                <edge source="abc.ABC" target="object">
+                  <point x="19.75" y="-13.0" />
+                  <point x="1052.75" y="51.0" />
+                  <point x="1087.75" y="51.0" />
+                  <point x="0.0" y="13.0" />
                 </edge>
-                <edge source="pedi_image.ThumbStrategy" target="pedi_image.DisplayStrategy">
-                  <point x="0.0" y="-61.5" />
-                  <point x="151.5" y="647.0" />
-                  <point x="219.29981203007515" y="647.0" />
-                  <point x="-53.0" y="49.5" />
+                <edge source="abc.ABC" target="abc.ABCMeta">
+                  <point x="-19.75" y="-13.0" />
+                  <point x="1013.25" y="51.0" />
+                  <point x="978.25" y="51.0" />
+                  <point x="0.0" y="13.0" />
                 </edge>
-                <edge source="image_manipulator.ImageFilterer" target="image_manipulator.ImageManipulator">
-                  <point x="0.0" y="-37.5" />
-                  <point x="3296.0" y="637.0" />
-                  <point x="2808.5714285714284" y="637.0" />
-                  <point x="76.57142857142844" y="25.0" />
+                <edge source="src.image_manipulator.ImageManipulator" target="abc.ABC">
+                  <point x="0.0" y="-13.0" />
+                  <point x="0.0" y="13.0" />
                 </edge>
-                <edge source="color_filter.SepiaFilter" target="color_filter.ColorFilter">
-                  <point x="0.0" y="-25.0" />
-                  <point x="1137.0" y="647.0" />
-                  <point x="957.2293233082706" y="647.0" />
-                  <point x="66.0" y="25.0" />
+                <edge source="src.image_manipulator.ImageBrightener" target="src.image_manipulator.ImageManipulator">
+                  <point x="0.0" y="-13.0" />
+                  <point x="425.5" y="208.0" />
+                  <point x="948.4285714285714" y="208.0" />
+                  <point x="-84.57142857142856" y="13.0" />
                 </edge>
-                <edge source="license_state.LicensedState" target="license_state.State">
-                  <point x="0.0" y="-25.0" />
-                  <point x="1365.5" y="647.0" />
-                  <point x="1433.299812030075" y="647.0" />
-                  <point x="-40.75" y="25.0" />
+                <edge source="src.image_manipulator.ImageSharpner" target="src.image_manipulator.ImageManipulator">
+                  <point x="0.0" y="-13.0" />
+                  <point x="1324.5" y="218.0" />
+                  <point x="1075.2857142857142" y="218.0" />
+                  <point x="42.28571428571422" y="13.0" />
                 </edge>
-                <edge source="color_filter.NegativeFilter" target="color_filter.ColorFilter">
-                  <point x="0.0" y="-25.0" />
-                  <point x="908.5" y="647.0" />
-                  <point x="891.2293233082706" y="647.0" />
-                  <point x="0.0" y="25.0" />
+                <edge source="src.image_manipulator.ImageFliper" target="src.image_manipulator.ImageManipulator">
+                  <point x="0.0" y="-13.0" />
+                  <point x="130.5" y="198.0" />
+                  <point x="906.1428571428571" y="198.0" />
+                  <point x="-126.85714285714289" y="13.0" />
                 </edge>
-                <edge source="pedi_image.DisplayStrategy" target="abc.ABC">
-                  <point x="0.0" y="-49.5" />
-                  <point x="272.29981203007515" y="478.0" />
-                  <point x="1211.75" y="478.0" />
-                  <point x="-29.625" y="13.0" />
+                <edge source="src.image_manipulator.ImageContraster" target="src.image_manipulator.ImageManipulator">
+                  <point x="0.0" y="-13.0" />
+                  <point x="734.5" y="218.0" />
+                  <point x="990.7142857142858" y="218.0" />
+                  <point x="-42.28571428571422" y="13.0" />
                 </edge>
-                <edge source="license_state.NotLicensedState" target="license_state.State">
-                  <point x="0.0" y="-25.0" />
-                  <point x="1615.0" y="647.0" />
-                  <point x="1514.799812030075" y="647.0" />
-                  <point x="40.75" y="25.0" />
+                <edge source="src.image_manipulator.ImageFilterer" target="src.image_manipulator.ImageManipulator">
+                  <point x="0.0" y="-13.0" />
+                  <point x="1619.5" y="208.0" />
+                  <point x="1117.5714285714284" y="208.0" />
+                  <point x="84.57142857142844" y="13.0" />
                 </edge>
-                <edge source="image_manipulator.ImageContraster" target="image_manipulator.ImageManipulator">
-                  <point x="0.0" y="-25.0" />
-                  <point x="2168.0" y="637.0" />
-                  <point x="2655.4285714285716" y="637.0" />
-                  <point x="-76.57142857142856" y="25.0" />
+                <edge source="src.image_manipulator.ImageRotator" target="src.image_manipulator.ImageManipulator">
+                  <point x="0.0" y="-13.0" />
+                  <point x="0.0" y="13.0" />
                 </edge>
-                <edge source="image_manipulator.ImageFliper" target="image_manipulator.ImageManipulator">
-                  <point x="0.0" y="-25.0" />
-                  <point x="3014.0" y="647.0" />
-                  <point x="2770.285714285714" y="647.0" />
-                  <point x="38.28571428571422" y="25.0" />
-                </edge>
-                <edge source="image_manipulator.ImageSharpner" target="image_manipulator.ImageManipulator">
-                  <point x="0.0" y="-25.0" />
-                  <point x="3578.0" y="627.0" />
-                  <point x="2846.857142857143" y="627.0" />
-                  <point x="114.85714285714289" y="25.0" />
-                </edge>
-                <edge source="pedi_image.PediImage" target="pedi_image.ICloneable">
-                  <point x="0.0" y="-133.5" />
-                  <point x="0.0" y="25.0" />
-                </edge>
-                <edge source="image_manipulator.ImageManipulator" target="abc.ABC">
-                  <point x="0.0" y="-25.0" />
-                  <point x="2732.0" y="478.0" />
-                  <point x="1271.0" y="478.0" />
-                  <point x="29.625" y="13.0" />
-                </edge>
-                <edge source="image_manipulator.ImageResizer" target="image_manipulator.ImageManipulator">
-                  <point x="0.0" y="-25.0" />
-                  <point x="1886.0" y="627.0" />
-                  <point x="2617.142857142857" y="627.0" />
-                  <point x="-114.85714285714289" y="25.0" />
-                </edge>
-                <edge source="pedi_image.LabelStrategy" target="pedi_image.DisplayStrategy">
-                  <point x="0.0" y="-25.0" />
-                  <point x="424.5" y="647.0" />
-                  <point x="325.29981203007515" y="647.0" />
-                  <point x="53.0" y="49.5" />
-                </edge>
-                <edge source="image_manipulator.ImageRotator" target="image_manipulator.ImageManipulator">
-                  <point x="0.0" y="-25.0" />
-                  <point x="0.0" y="25.0" />
-                </edge>
-                <edge source="image_manipulator.ImageBrightener" target="image_manipulator.ImageManipulator">
-                  <point x="0.0" y="-25.0" />
-                  <point x="2450.0" y="647.0" />
-                  <point x="2693.714285714286" y="647.0" />
-                  <point x="-38.285714285714334" y="25.0" />
-                </edge>
-                <edge source="color_filter.BlackWhiteFilter" target="color_filter.ColorFilter">
-                  <point x="0.0" y="-25.0" />
-                  <point x="662.5" y="647.0" />
-                  <point x="825.2293233082706" y="647.0" />
-                  <point x="-66.0" y="25.0" />
-                </edge>
-                <edge source="color_filter.ColorFilter" target="abc.ABC">
-                  <point x="0.0" y="-25.0" />
-                  <point x="891.2293233082706" y="488.0" />
-                  <point x="1231.5" y="488.0" />
-                  <point x="-9.875" y="13.0" />
+                <edge source="src.image_manipulator.ImageResizer" target="src.image_manipulator.ImageManipulator">
+                  <point x="0.0" y="-13.0" />
+                  <point x="1911.0" y="198.0" />
+                  <point x="1159.857142857143" y="198.0" />
+                  <point x="126.85714285714289" y="13.0" />
                 </edge>
               </edges>
-              <settings layout="Hierarchic Group" zoom="0.4521132221791392" x="1452.5" y="608.9648370497428" />
-              <SelectedNodes />
-              <Categories>
-                <Category>Methods</Category>
-                <Category>Inner Classes</Category>
-                <Category>Fields</Category>
-              </Categories>
+              <settings layout="Hierarchic Group" zoom="0.5622276029055691" x="1012.5" y="132.84409991386735" />
+              <SelectedNodes>
+                <node>src.image_manipulator.ImageFliper</node>
+              </SelectedNodes>
+              <Categories />
             </state>
           </provider>
         </entry>
@@ -208,6 +151,11 @@
               <item name="pedi" type="b2602c69:ProjectViewProjectNode" />
               <item name="pedi" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="pedi" type="b2602c69:ProjectViewProjectNode" />
+              <item name="pedi" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -216,6 +164,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$USER_HOME$/Pictures" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
@@ -244,25 +193,19 @@
       <option name="presentableId" value="Default" />
       <updated>1555569504606</updated>
       <workItem from="1555569506069" duration="568000" />
+      <workItem from="1555584076194" duration="67000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="568000" />
+    <option name="totallyTimeSpent" value="635000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="27" width="1600" height="873" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info id="Favorites" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24967825" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25289574" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Database Changes" />
-      <window_info anchor="bottom" id="Version Control" />
-      <window_info anchor="bottom" id="Python Console" />
-      <window_info anchor="bottom" id="Terminal" />
-      <window_info anchor="bottom" id="Event Log" side_tool="true" />
+      <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" />
@@ -270,11 +213,17 @@
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="right" id="SciView" />
-      <window_info anchor="right" id="Database" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="8" />
+      <window_info anchor="bottom" id="Database Changes" order="9" />
+      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
+      <window_info anchor="bottom" id="Terminal" order="11" />
+      <window_info anchor="bottom" id="Python Console" order="12" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="SciView" order="3" />
+      <window_info anchor="right" id="Database" order="4" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -414,6 +363,7 @@
             <node>image_manipulator.ImageContraster</node>
           </SelectedNodes>
           <Categories />
+          <SCOPE>All</SCOPE>
         </state>
       </provider>
     </entry>
@@ -476,11 +426,39 @@
           </nodes>
           <notes />
           <edges>
+            <edge source="image_manipulator.ImageSharpner" target="image_manipulator.ImageManipulator">
+              <point x="0.0" y="-25.0" />
+              <point x="3578.0" y="627.0" />
+              <point x="2846.857142857143" y="627.0" />
+              <point x="114.85714285714289" y="25.0" />
+            </edge>
             <edge source="license_state.State" target="abc.ABC">
               <point x="0.0" y="-25.0" />
               <point x="1474.049812030075" y="488.0" />
               <point x="1251.25" y="488.0" />
               <point x="9.875" y="13.0" />
+            </edge>
+            <edge source="pedi_image.PediImage" target="pedi_image.ICloneable">
+              <point x="0.0" y="-133.5" />
+              <point x="0.0" y="25.0" />
+            </edge>
+            <edge source="image_manipulator.ImageManipulator" target="abc.ABC">
+              <point x="0.0" y="-25.0" />
+              <point x="2732.0" y="478.0" />
+              <point x="1271.0" y="478.0" />
+              <point x="29.625" y="13.0" />
+            </edge>
+            <edge source="image_manipulator.ImageResizer" target="image_manipulator.ImageManipulator">
+              <point x="0.0" y="-25.0" />
+              <point x="1886.0" y="627.0" />
+              <point x="2617.142857142857" y="627.0" />
+              <point x="-114.85714285714289" y="25.0" />
+            </edge>
+            <edge source="pedi_image.LabelStrategy" target="pedi_image.DisplayStrategy">
+              <point x="0.0" y="-25.0" />
+              <point x="424.5" y="647.0" />
+              <point x="325.29981203007515" y="647.0" />
+              <point x="53.0" y="49.5" />
             </edge>
             <edge source="pedi_image.ThumbStrategy" target="pedi_image.DisplayStrategy">
               <point x="0.0" y="-61.5" />
@@ -499,6 +477,22 @@
               <point x="1137.0" y="647.0" />
               <point x="957.2293233082706" y="647.0" />
               <point x="66.0" y="25.0" />
+            </edge>
+            <edge source="image_manipulator.ImageRotator" target="image_manipulator.ImageManipulator">
+              <point x="0.0" y="-25.0" />
+              <point x="0.0" y="25.0" />
+            </edge>
+            <edge source="image_manipulator.ImageBrightener" target="image_manipulator.ImageManipulator">
+              <point x="0.0" y="-25.0" />
+              <point x="2450.0" y="647.0" />
+              <point x="2693.714285714286" y="647.0" />
+              <point x="-38.285714285714334" y="25.0" />
+            </edge>
+            <edge source="color_filter.BlackWhiteFilter" target="color_filter.ColorFilter">
+              <point x="0.0" y="-25.0" />
+              <point x="662.5" y="647.0" />
+              <point x="825.2293233082706" y="647.0" />
+              <point x="-66.0" y="25.0" />
             </edge>
             <edge source="license_state.LicensedState" target="license_state.State">
               <point x="0.0" y="-25.0" />
@@ -530,70 +524,119 @@
               <point x="2655.4285714285716" y="637.0" />
               <point x="-76.57142857142856" y="25.0" />
             </edge>
-            <edge source="image_manipulator.ImageFliper" target="image_manipulator.ImageManipulator">
-              <point x="0.0" y="-25.0" />
-              <point x="3014.0" y="647.0" />
-              <point x="2770.285714285714" y="647.0" />
-              <point x="38.28571428571422" y="25.0" />
-            </edge>
-            <edge source="image_manipulator.ImageSharpner" target="image_manipulator.ImageManipulator">
-              <point x="0.0" y="-25.0" />
-              <point x="3578.0" y="627.0" />
-              <point x="2846.857142857143" y="627.0" />
-              <point x="114.85714285714289" y="25.0" />
-            </edge>
-            <edge source="pedi_image.PediImage" target="pedi_image.ICloneable">
-              <point x="0.0" y="-133.5" />
-              <point x="0.0" y="25.0" />
-            </edge>
-            <edge source="image_manipulator.ImageManipulator" target="abc.ABC">
-              <point x="0.0" y="-25.0" />
-              <point x="2732.0" y="478.0" />
-              <point x="1271.0" y="478.0" />
-              <point x="29.625" y="13.0" />
-            </edge>
-            <edge source="image_manipulator.ImageResizer" target="image_manipulator.ImageManipulator">
-              <point x="0.0" y="-25.0" />
-              <point x="1886.0" y="627.0" />
-              <point x="2617.142857142857" y="627.0" />
-              <point x="-114.85714285714289" y="25.0" />
-            </edge>
-            <edge source="pedi_image.LabelStrategy" target="pedi_image.DisplayStrategy">
-              <point x="0.0" y="-25.0" />
-              <point x="424.5" y="647.0" />
-              <point x="325.29981203007515" y="647.0" />
-              <point x="53.0" y="49.5" />
-            </edge>
-            <edge source="image_manipulator.ImageRotator" target="image_manipulator.ImageManipulator">
-              <point x="0.0" y="-25.0" />
-              <point x="0.0" y="25.0" />
-            </edge>
-            <edge source="image_manipulator.ImageBrightener" target="image_manipulator.ImageManipulator">
-              <point x="0.0" y="-25.0" />
-              <point x="2450.0" y="647.0" />
-              <point x="2693.714285714286" y="647.0" />
-              <point x="-38.285714285714334" y="25.0" />
-            </edge>
-            <edge source="color_filter.BlackWhiteFilter" target="color_filter.ColorFilter">
-              <point x="0.0" y="-25.0" />
-              <point x="662.5" y="647.0" />
-              <point x="825.2293233082706" y="647.0" />
-              <point x="-66.0" y="25.0" />
-            </edge>
             <edge source="color_filter.ColorFilter" target="abc.ABC">
               <point x="0.0" y="-25.0" />
               <point x="891.2293233082706" y="488.0" />
               <point x="1231.5" y="488.0" />
               <point x="-9.875" y="13.0" />
             </edge>
+            <edge source="image_manipulator.ImageFliper" target="image_manipulator.ImageManipulator">
+              <point x="0.0" y="-25.0" />
+              <point x="3014.0" y="647.0" />
+              <point x="2770.285714285714" y="647.0" />
+              <point x="38.28571428571422" y="25.0" />
+            </edge>
           </edges>
-          <settings layout="Hierarchic Group" zoom="0.4521132221791392" x="1452.5" y="608.9648370497428" />
+          <settings layout="Hierarchic Group" zoom="0.4521132221791392" x="1453.0" y="609.0" />
           <SelectedNodes />
           <Categories>
             <Category>Methods</Category>
             <Category>Inner Classes</Category>
             <Category>Fields</Category>
           </Categories>
+          <SCOPE>All</SCOPE>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/database.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="18" column="17" selection-start-line="18" selection-start-column="17" selection-end-line="18" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://Python/#/home/traumgedanken/Documents/projects/pedi/src/image_manipulator.py">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>Python</ID>
+          <OriginalElement>#/home/traumgedanken/Documents/projects/pedi/src/image_manipulator.py</OriginalElement>
+          <nodes>
+            <node x="993.5" y="76.0">abc.ABC</node>
+            <node x="590.0" y="238.0">src.image_manipulator.ImageContraster</node>
+            <node x="1482.0" y="238.0">src.image_manipulator.ImageFilterer</node>
+            <node x="924.75" y="0.0">abc.ABCMeta</node>
+            <node x="1187.0" y="238.0">src.image_manipulator.ImageSharpner</node>
+            <node x="885.0" y="152.0">src.image_manipulator.ImageManipulator</node>
+            <node x="1777.0" y="238.0">src.image_manipulator.ImageResizer</node>
+            <node x="1051.75" y="0.0">object</node>
+            <node x="281.0" y="238.0">src.image_manipulator.ImageBrightener</node>
+            <node x="899.0" y="238.0">src.image_manipulator.ImageRotator</node>
+            <node x="0.0" y="238.0">src.image_manipulator.ImageFliper</node>
+          </nodes>
+          <notes />
+          <edges>
+            <edge source="abc.ABC" target="object">
+              <point x="19.75" y="-13.0" />
+              <point x="1052.75" y="51.0" />
+              <point x="1087.75" y="51.0" />
+              <point x="0.0" y="13.0" />
+            </edge>
+            <edge source="abc.ABC" target="abc.ABCMeta">
+              <point x="-19.75" y="-13.0" />
+              <point x="1013.25" y="51.0" />
+              <point x="978.25" y="51.0" />
+              <point x="0.0" y="13.0" />
+            </edge>
+            <edge source="src.image_manipulator.ImageManipulator" target="abc.ABC">
+              <point x="0.0" y="-13.0" />
+              <point x="0.0" y="13.0" />
+            </edge>
+            <edge source="src.image_manipulator.ImageBrightener" target="src.image_manipulator.ImageManipulator">
+              <point x="0.0" y="-13.0" />
+              <point x="425.5" y="208.0" />
+              <point x="948.4285714285714" y="208.0" />
+              <point x="-84.57142857142856" y="13.0" />
+            </edge>
+            <edge source="src.image_manipulator.ImageSharpner" target="src.image_manipulator.ImageManipulator">
+              <point x="0.0" y="-13.0" />
+              <point x="1324.5" y="218.0" />
+              <point x="1075.2857142857142" y="218.0" />
+              <point x="42.28571428571422" y="13.0" />
+            </edge>
+            <edge source="src.image_manipulator.ImageFliper" target="src.image_manipulator.ImageManipulator">
+              <point x="0.0" y="-13.0" />
+              <point x="130.5" y="198.0" />
+              <point x="906.1428571428571" y="198.0" />
+              <point x="-126.85714285714289" y="13.0" />
+            </edge>
+            <edge source="src.image_manipulator.ImageContraster" target="src.image_manipulator.ImageManipulator">
+              <point x="0.0" y="-13.0" />
+              <point x="734.5" y="218.0" />
+              <point x="990.7142857142858" y="218.0" />
+              <point x="-42.28571428571422" y="13.0" />
+            </edge>
+            <edge source="src.image_manipulator.ImageFilterer" target="src.image_manipulator.ImageManipulator">
+              <point x="0.0" y="-13.0" />
+              <point x="1619.5" y="208.0" />
+              <point x="1117.5714285714284" y="208.0" />
+              <point x="84.57142857142844" y="13.0" />
+            </edge>
+            <edge source="src.image_manipulator.ImageRotator" target="src.image_manipulator.ImageManipulator">
+              <point x="0.0" y="-13.0" />
+              <point x="0.0" y="13.0" />
+            </edge>
+            <edge source="src.image_manipulator.ImageResizer" target="src.image_manipulator.ImageManipulator">
+              <point x="0.0" y="-13.0" />
+              <point x="1911.0" y="198.0" />
+              <point x="1159.857142857143" y="198.0" />
+              <point x="126.85714285714289" y="13.0" />
+            </edge>
+          </edges>
+          <settings layout="Hierarchic Group" zoom="0.5622276029055691" x="1012.5" y="132.84409991386735" />
+          <SelectedNodes>
+            <node>src.image_manipulator.ImageFliper</node>
+          </SelectedNodes>
+          <Categories />
         </state>
       </provider>
     </entry>
