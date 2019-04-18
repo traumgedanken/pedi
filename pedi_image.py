@@ -1,4 +1,5 @@
 from PyQt5.QtGui import QPixmap
+from PyQt5.QtCore import Qt
 from PIL import ImageQt
 from image_manipulator import ImageFilterer
 
@@ -21,7 +22,8 @@ class DisplayStrategy(ABC):
 class LabelStrategy(DisplayStrategy):
     def display(self, pedi_image):
         pixmap = ImageQt.toqpixmap(pedi_image.qimage)
-        self.parent.setPixmap(pixmap)
+
+        self.parent.image_label.setPixmap(pixmap)
 
         logging.debug('image label updated')
 

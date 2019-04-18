@@ -375,6 +375,10 @@ class MainLayout(QVBoxLayout):
         self.upload_buttton = QPushButton("Upload")
         self.upload_buttton.clicked.connect(self.on_upload)
 
+        self.take_photo_button = QPushButton("Photo")
+        self.take_photo_button.setEnabled(True)
+        self.take_photo_button.clicked.connect(self.on_take_photo)
+
         self.reset_buttton = QPushButton("Reset")
         self.reset_buttton.setEnabled(False)
         self.reset_buttton.clicked.connect(self.on_reset)
@@ -386,16 +390,16 @@ class MainLayout(QVBoxLayout):
         buttton_layout = QHBoxLayout()
         buttton_layout.setAlignment(Qt.AlignTop)
         buttton_layout.addWidget(self.upload_buttton)
+        buttton_layout.addWidget(self.take_photo_button)
         buttton_layout.addWidget(self.reset_buttton)
         buttton_layout.addWidget(self.save_buttton)
         self.addLayout(buttton_layout)
 
         self.image_label = QLabel()
         self.image_label.setAlignment(Qt.AlignCenter)
-        self.image_label.setScaledContents(True)
         self.addWidget(self.image_label)
         global strategies
-        strategies['label'] = LabelStrategy(self.image_label)
+        strategies['label'] = LabelStrategy(self)
 
         self.action_tabs = ActionTabs(self)
         self.addWidget(self.action_tabs)
@@ -435,6 +439,9 @@ class MainLayout(QVBoxLayout):
         self.action_tabs.setVisible(True)
         self.action_tabs.adjustment_tab.reset_sliders()
         self.action_tabs.modification_tab.set_boxes()
+
+    def on_take_photo(self):
+        logging.debug('on take photo button clicked')
 
     def on_reset(self):
         logging.debug('on reset buttton clicked')
@@ -489,7 +496,8 @@ class PediUI(QWidget):
             else:
                 break
 
-        self.main_layout.user_label.setText(f'licenced to: {user.login}' if user else 'not licensed')
+        self.main_layout.user_label.setText(
+            f'licenced to: {user.login}' if user else 'not licensed')
         self.main_layout.set_license(self, bool(user))
 
     def center(self):
