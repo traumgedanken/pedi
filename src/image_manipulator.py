@@ -83,7 +83,3 @@ class ImageSharpner(ImageManipulator):
 
         enhancer = ImageEnhance.Sharpness(pedi_image.qimage)
         pedi_image.qimage = enhancer.enhance(factor)
-
-
-def save(img, path):
-    img.save(path)

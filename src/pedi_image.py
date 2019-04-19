@@ -61,6 +61,7 @@ class PediImage(ICloneable):
         self.qimage = ImageQt.fromqpixmap(pixmap)
 
         self.strategy = None
+        self.operation = None
 
     @property
     def width(self):

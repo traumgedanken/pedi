@@ -91,12 +91,7 @@ class FiltersTab(QWidget):
         operation = operations.get_operation('filter')
         drawer.set_operation(image_preview, operation)
         drawer.process(image_preview, name)
-        self.parent.parent.refresh_image()
-
-
-def _get_converted_point(user_p1, user_p2, p1, p2, x):
-    r = (x - user_p1) / (user_p2 - user_p1)
-    return p1 + r * (p2 - p1)
+        self.parent.refresh_image()
 
 
 class AdjustingTab(QWidget):
@@ -160,14 +155,19 @@ class AdjustingTab(QWidget):
         self.sliders['sharpness'].setValue(SLIDER_DEF_VAL)
         self.sliders['contrast'].setValue(SLIDER_DEF_VAL)
 
+    @staticmethod
+    def _get_converted_point(user_p1, user_p2, p1, p2, x):
+        r = (x - user_p1) / (user_p2 - user_p1)
+        return p1 + r * (p2 - p1)
+
     def __adjust(self, prop):
         logging.debug('on %s slider released' % prop)
         slider = self.sliders[prop]
 
         slider.setToolTip(str(slider.value()))
 
-        factor = _get_converted_point(SLIDER_MIN_VAL, SLIDER_MAX_VAL, BRIGHTNESS_FACTOR_MIN,
-                                      BRIGHTNESS_FACTOR_MAX, slider.value())
+        factor = AdjustingTab._get_converted_point(SLIDER_MIN_VAL, SLIDER_MAX_VAL, BRIGHTNESS_FACTOR_MIN,
+                                                   BRIGHTNESS_FACTOR_MAX, slider.value())
         logging.debug("%s factor: %f" % (prop, factor))
 
         global image_preview, drawer, operations
@@ -238,9 +238,9 @@ class ModificationTab(QWidget):
         self.setLayout(main_layout)
 
     def set_boxes(self):
-        global image_original
-        self.width_box.setText(str(image_original.width))
-        self.height_box.setText(str(image_original.height))
+        global image_preview
+        self.width_box.setText(str(image_preview.width))
+        self.height_box.setText(str(image_preview.height))
 
     def on_height_change(self):
         logging.debug('on height change')
@@ -335,6 +335,7 @@ class RotationTab(QWidget):
         drawer.set_operation(image_preview, operation)
         drawer.process(image_preview, 90)
         self.parent.parent.refresh_image()
+        self.parent.modification_tab.set_boxes()
 
     def on_rotate_right(self):
         logging.debug('on rotate right')
@@ -344,6 +345,7 @@ class RotationTab(QWidget):
         drawer.set_operation(image_preview, operation)
         drawer.process(image_preview, 270)
         self.parent.parent.refresh_image()
+        self.parent.modification_tab.set_boxes()
 
     def on_flip_left(self):
         logging.debug('on flip left')
@@ -459,6 +461,7 @@ class MainLayout(QVBoxLayout):
         image_preview.show()
         image_preview.set_display_strategy(strategies['thumb'])
         image_preview.show()
+        self.action_tabs.modification_tab.set_boxes()
 
 
 class PediUI(QWidget):
