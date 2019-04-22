@@ -2,17 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c777d9a8-9f1c-4f0a-8d80-5cf9a2664ad1" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/color_filter.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/database.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/drawer.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image_manipulator.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/license_state.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/operations.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pedi.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pedi_image.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ui.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/Курсова робота.docx" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Курсова робота.docx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/image_manipulator.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/image_manipulator.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ui.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -22,96 +15,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/database.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="18" column="17" selection-start-line="18" selection-start-column="17" selection-end-line="18" selection-end-column="17" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="uml://Python/#/home/traumgedanken/Documents/projects/pedi/src/image_manipulator.py">
+        <entry file="uml://Python/#/home/traumgedanken/Documents/projects/pedi/src/pedi.py">
           <provider selected="true" editor-type-id="UmlEditorProvider">
             <state>
               <ID>Python</ID>
-              <OriginalElement>#/home/traumgedanken/Documents/projects/pedi/src/image_manipulator.py</OriginalElement>
+              <OriginalElement>#/home/traumgedanken/Documents/projects/pedi/src/pedi.py</OriginalElement>
               <nodes>
-                <node x="993.5" y="76.0">abc.ABC</node>
-                <node x="590.0" y="238.0">src.image_manipulator.ImageContraster</node>
-                <node x="1482.0" y="238.0">src.image_manipulator.ImageFilterer</node>
-                <node x="924.75" y="0.0">abc.ABCMeta</node>
-                <node x="1187.0" y="238.0">src.image_manipulator.ImageSharpner</node>
-                <node x="885.0" y="152.0">src.image_manipulator.ImageManipulator</node>
-                <node x="1777.0" y="238.0">src.image_manipulator.ImageResizer</node>
-                <node x="1051.75" y="0.0">object</node>
-                <node x="281.0" y="238.0">src.image_manipulator.ImageBrightener</node>
-                <node x="899.0" y="238.0">src.image_manipulator.ImageRotator</node>
-                <node x="0.0" y="238.0">src.image_manipulator.ImageFliper</node>
+                <node x="0.0" y="0.0">src.drawer.Drawer</node>
               </nodes>
               <notes />
-              <edges>
-                <edge source="abc.ABC" target="object">
-                  <point x="19.75" y="-13.0" />
-                  <point x="1052.75" y="51.0" />
-                  <point x="1087.75" y="51.0" />
-                  <point x="0.0" y="13.0" />
-                </edge>
-                <edge source="abc.ABC" target="abc.ABCMeta">
-                  <point x="-19.75" y="-13.0" />
-                  <point x="1013.25" y="51.0" />
-                  <point x="978.25" y="51.0" />
-                  <point x="0.0" y="13.0" />
-                </edge>
-                <edge source="src.image_manipulator.ImageManipulator" target="abc.ABC">
-                  <point x="0.0" y="-13.0" />
-                  <point x="0.0" y="13.0" />
-                </edge>
-                <edge source="src.image_manipulator.ImageBrightener" target="src.image_manipulator.ImageManipulator">
-                  <point x="0.0" y="-13.0" />
-                  <point x="425.5" y="208.0" />
-                  <point x="948.4285714285714" y="208.0" />
-                  <point x="-84.57142857142856" y="13.0" />
-                </edge>
-                <edge source="src.image_manipulator.ImageSharpner" target="src.image_manipulator.ImageManipulator">
-                  <point x="0.0" y="-13.0" />
-                  <point x="1324.5" y="218.0" />
-                  <point x="1075.2857142857142" y="218.0" />
-                  <point x="42.28571428571422" y="13.0" />
-                </edge>
-                <edge source="src.image_manipulator.ImageFliper" target="src.image_manipulator.ImageManipulator">
-                  <point x="0.0" y="-13.0" />
-                  <point x="130.5" y="198.0" />
-                  <point x="906.1428571428571" y="198.0" />
-                  <point x="-126.85714285714289" y="13.0" />
-                </edge>
-                <edge source="src.image_manipulator.ImageContraster" target="src.image_manipulator.ImageManipulator">
-                  <point x="0.0" y="-13.0" />
-                  <point x="734.5" y="218.0" />
-                  <point x="990.7142857142858" y="218.0" />
-                  <point x="-42.28571428571422" y="13.0" />
-                </edge>
-                <edge source="src.image_manipulator.ImageFilterer" target="src.image_manipulator.ImageManipulator">
-                  <point x="0.0" y="-13.0" />
-                  <point x="1619.5" y="208.0" />
-                  <point x="1117.5714285714284" y="208.0" />
-                  <point x="84.57142857142844" y="13.0" />
-                </edge>
-                <edge source="src.image_manipulator.ImageRotator" target="src.image_manipulator.ImageManipulator">
-                  <point x="0.0" y="-13.0" />
-                  <point x="0.0" y="13.0" />
-                </edge>
-                <edge source="src.image_manipulator.ImageResizer" target="src.image_manipulator.ImageManipulator">
-                  <point x="0.0" y="-13.0" />
-                  <point x="1911.0" y="198.0" />
-                  <point x="1159.857142857143" y="198.0" />
-                  <point x="126.85714285714289" y="13.0" />
-                </edge>
-              </edges>
-              <settings layout="Hierarchic Group" zoom="0.5622276029055691" x="1012.5" y="132.84409991386735" />
+              <edges />
+              <settings layout="Hierarchic Group" zoom="1.0" x="575.5" y="335.0" />
               <SelectedNodes>
-                <node>src.image_manipulator.ImageFliper</node>
+                <node>src.drawer.Drawer</node>
               </SelectedNodes>
               <Categories />
             </state>
@@ -144,6 +61,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -160,13 +78,15 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Pictures" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
   </component>
@@ -194,16 +114,18 @@
       <updated>1555569504606</updated>
       <workItem from="1555569506069" duration="568000" />
       <workItem from="1555584076194" duration="67000" />
+      <workItem from="1555659046285" duration="1499000" />
+      <workItem from="1555691242758" duration="77000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="635000" />
+    <option name="totallyTimeSpent" value="2211000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="27" width="1600" height="873" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25289574" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25933075" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -367,25 +289,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/image_manipulator.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="63" lean-forward="true" selection-start-line="63" selection-end-line="63" />
-          <folding>
-            <element signature="e#0#35#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/license_state.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#35#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/image_manipulator.py" />
+    <entry file="file://$PROJECT_DIR$/license_state.py" />
     <entry file="uml://Python/#/home/traumgedanken/Documents/projects/pedi/image_manipulator.py">
       <provider selected="true" editor-type-id="UmlEditorProvider">
         <state>
@@ -548,13 +453,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/database.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="18" column="17" selection-start-line="18" selection-start-column="17" selection-end-line="18" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="uml://Python/#/home/traumgedanken/Documents/projects/pedi/src/image_manipulator.py">
       <provider selected="true" editor-type-id="UmlEditorProvider">
         <state>
@@ -632,9 +530,89 @@
               <point x="126.85714285714289" y="13.0" />
             </edge>
           </edges>
-          <settings layout="Hierarchic Group" zoom="0.5622276029055691" x="1012.5" y="132.84409991386735" />
+          <settings layout="Hierarchic Group" zoom="0.5622276029055691" x="1013.0" y="133.0" />
           <SelectedNodes>
             <node>src.image_manipulator.ImageFliper</node>
+          </SelectedNodes>
+          <Categories />
+          <SCOPE>All</SCOPE>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/database.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="18" column="17" selection-start-line="18" selection-start-column="17" selection-end-line="18" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pedi_image.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="11" selection-start-line="11" selection-end-line="11" />
+          <folding>
+            <element signature="e#0#31#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pedi.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="10" selection-start-line="10" selection-end-line="10" />
+          <folding>
+            <element signature="e#0#10#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/operations.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" column="28" selection-start-line="14" selection-start-column="28" selection-end-line="14" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/image_manipulator.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#35#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/license_state.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#35#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/color_filter.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#35#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://Python/#/home/traumgedanken/Documents/projects/pedi/src/pedi.py">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>Python</ID>
+          <OriginalElement>#/home/traumgedanken/Documents/projects/pedi/src/pedi.py</OriginalElement>
+          <nodes>
+            <node x="0.0" y="0.0">src.drawer.Drawer</node>
+          </nodes>
+          <notes />
+          <edges />
+          <settings layout="Hierarchic Group" zoom="1.0" x="575.5" y="335.0" />
+          <SelectedNodes>
+            <node>src.drawer.Drawer</node>
           </SelectedNodes>
           <Categories />
         </state>

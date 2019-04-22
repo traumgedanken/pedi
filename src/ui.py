@@ -28,7 +28,6 @@ THUMB_SIZE = 120
 
 # global
 image_original = None
-image_preview = None
 operations = Operations()
 drawer = Drawer()
 strategies = {}
@@ -91,7 +90,7 @@ class FiltersTab(QWidget):
         operation = operations.get_operation('filter')
         drawer.set_operation(image_preview, operation)
         drawer.process(image_preview, name)
-        self.parent.refresh_image()
+        self.parent.parent.refresh_image()
 
 
 class AdjustingTab(QWidget):
@@ -372,7 +371,7 @@ class MainLayout(QVBoxLayout):
         super().__init__()
         self.parent = parent
         self.file_name = None
-        self.__licensed = None
+        self._licensed = None
 
         self.upload_buttton = QPushButton("Upload")
         self.upload_buttton.clicked.connect(self.on_upload)
@@ -402,19 +401,12 @@ class MainLayout(QVBoxLayout):
         self.addWidget(self.action_tabs)
         self.action_tabs.setVisible(False)
 
-        self.user_label = QPushButton()
-        self.user_label.setStyleSheet(
-            "QPushButton{font-size: 10px; color: grey;}")
-        self.user_label.setFlat(True)
-        self.user_label.clicked.connect(self.parent.user_authorize)
-        self.addWidget(self.user_label)
-
     def set_license(self, merchant, state):
-        if (type(merchant) is not PediUI):
+        if (type(merchant) is not ProxyMainLayout):
             raise Exception
 
-        self.__licensed = state
-        logging.debug('license set to %s', self.__licensed)
+        self._licensed = state
+        logging.debug('license set to %s', self._licensed)
 
     def on_upload(self):
         logging.debug('on upload buttton clicked')
@@ -431,7 +423,7 @@ class MainLayout(QVBoxLayout):
 
         self.reset_buttton.setEnabled(True)
         self.save_buttton.setEnabled(True)
-        if (not self.__licensed):
+        if (not self._licensed):
             self.save_buttton.setToolTip('Sign in to unlock this')
         self.action_tabs.setVisible(True)
         self.action_tabs.adjustment_tab.reset_sliders()
@@ -447,8 +439,7 @@ class MainLayout(QVBoxLayout):
     def on_save(self):
         logging.debug('on save buttton clicked')
 
-        new_img_path = LicensedState.run(
-            self) if self.__licensed else NotLicensedState.run(self)
+        new_img_path = LicensedState.run(self)
 
         if new_img_path:
             logging.debug("save output image to %s" % new_img_path)
@@ -464,12 +455,44 @@ class MainLayout(QVBoxLayout):
         self.action_tabs.modification_tab.set_boxes()
 
 
+class ProxyMainLayout(MainLayout):
+    def __init__(self, parent):
+        super().__init__(parent)
+
+        self.user_label = QPushButton()
+        self.user_label.setStyleSheet(
+            "QPushButton{font-size: 10px; color: grey;}")
+        self.user_label.setFlat(True)
+        self.user_label.clicked.connect(self.user_authorize)
+        self.addWidget(self.user_label)
+        
+        self.user_authorize()
+
+    def on_save(self):
+        if (self._licensed):
+            super().on_save()
+        else:
+            NotLicensedState.run(self)
+
+    def user_authorize(self):
+        user = None
+
+        while(not user):
+            login, ok_pressed = QInputDialog.getText(
+                self.parent, "SIGN IN", "Enter your login:", QLineEdit.Normal, "")
+            if (ok_pressed):
+                user = DataBase.get_user(login)
+            else:
+                break
+
+        self.user_label.setText(
+            f'licenced to: {user.login}' if user else 'not licensed')
+        self.set_license(self, bool(user))
+
+
 class PediUI(QWidget):
     def __init__(self):
         super().__init__()
-
-        self.main_layout = MainLayout(self)
-        self.setLayout(self.main_layout)
 
         self.setMinimumSize(600, 500)
         self.setMaximumSize(900, 900)
@@ -478,22 +501,8 @@ class PediUI(QWidget):
         self.center()
         self.show()
 
-        self.user_authorize()
-
-    def user_authorize(self):
-        user = None
-
-        while(not user):
-            login, ok_pressed = QInputDialog.getText(
-                self, "SIGN IN", "Enter your login:", QLineEdit.Normal, "")
-            if (ok_pressed):
-                user = DataBase.get_user(login)
-            else:
-                break
-
-        self.main_layout.user_label.setText(
-            f'licenced to: {user.login}' if user else 'not licensed')
-        self.main_layout.set_license(self, bool(user))
+        self.main_layout = ProxyMainLayout(self)
+        self.setLayout(self.main_layout)
 
     def center(self):
         qr = self.frameGeometry()
